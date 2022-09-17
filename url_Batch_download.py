@@ -26,9 +26,12 @@ def BatchDownload(url, pattern, Directory):
     # 下载链接
     for href in hset:
         filename = os.path.join(Directory, href.split('/')[-1])
-        print("正在下载", filename)
-        urllib.request.urlretrieve(href, filename)
-        print("成功下载！")
+        if(os.path.exists(filename)):
+            print(href.split('/')[-1]+' is exist!')
+        else:
+            print("正在下载", filename)
+            urllib.request.urlretrieve(href, filename)
+            print("成功下载！")
 
         # 无sleep间隔，网站认定这种行为是攻击，反反爬虫
         time.sleep(1)
