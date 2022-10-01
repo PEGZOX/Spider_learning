@@ -5,6 +5,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 
+
+#该程序用于在网页端进行usgs的批量下载
+#selenium库多用于网页测试
 gen_dict={}
 gen_dict['L5'] = '/html/body/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[3]/div[1]/ul/li[14]/ul/li[3]/ul/li[3]/span/div[1]/input'
 gen_dict['L7'] = '/html/body/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/div[3]/div[1]/ul/li[14]/ul/li[3]/ul/li[2]/span/div[1]/input'
